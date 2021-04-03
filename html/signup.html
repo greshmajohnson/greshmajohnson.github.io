@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment1</title>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+      <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+    </svg>
+    <style>
+       nav{
+        font-family:fantasy;
+        }
+        #banner {
+    background-image: linear-gradient(120deg, #91C4FF 0%, #F0F7FF 87%);
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  #cloud-scroll {
+    /* background: url(http://9a2e1a2047765d2a004e-e6d2db425d8d4f2619e5cee56a48bcef.r55.cf2.rackcdn.com/clouds.png) repeat-x; */
+    background: url(/images/140.png) repeat-x;
+    margin-top: -2.15em;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background-size: cover;
+    position: relative;
+    -webkit-animation: 900000s backgroundScroll infinite linear;
+    -moz-animation: 900000s backgroundScroll infinite linear;
+    -o-animation: 900000s backgroundScroll infinite linear;
+    -ms-animation: 900000s backgroundScroll infinite linear;
+    animation: 900000s backgroundScroll infinite linear;
+  }
+  
+  @-webkit-keyframes backgroundScroll {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -99999999px 0;
+    }
+  }
+  
+  @keyframes backgroundScroll {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -99999999px 0;
+    }
+  }
+  form .indicator{
+  height: 10px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  display: none;
+}
+form .indicator span{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: lightgrey;
+  border-radius: 5px;
+}
+form .indicator span:nth-child(2){
+  margin: 0 3px;
+}
+form .indicator span.active:before{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+}
+.indicator span.weak:before{
+  background-color: #ff4757;
+}
+.indicator span.medium:before{
+  background-color: orange;
+}
+.indicator span.strong:before{
+  background-color: #23ad5c;
+}
+
+    </style>
+</head>
+<body>
+  <div id="banner">
+    <div id="cloud-scroll">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/index.html">
+        <img src="https://www.keralatourism.org/images/kt/kerala-tourism-title.png?d=18122017" alt="Kerala Tourism"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./district.html">Districts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./signup.html">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./login.html">Login</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container" style="margin-top:7em;margin-bottom: -60px;" >
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto" >
+        <div class="card card-signin my-2">
+          <div class="card-body border border-dark rounded">
+  <div class="mt-4">
+
+    <form id="signup" style="max-width: 380px;margin: auto;" action="user.html" onsubmit="return validate()" novalidate>
+    
+      <h1 class="h3  font-weight-normal text-center " style="font-weight: bolder;">Sign up</h1>
+      <p class="hint-text">Create your account. It's free and only takes a minute.</p>
+      <div class="row">
+        <div class="col">
+          <input id="fname" type="text" class="form-control" placeholder="First name">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Last name" >
+        </div>
+      </div>
+      <label for="phoneNumber" class="visually-hidden">Phone Number</label>
+      <input type="text" id="phone" class="form-control mt-3" placeholder="Phone Number">
+      <label for="error_phone" id="error_phone"></label>
+      <label id="phone_inst" style="text-align: justify;font-size: smaller;"></label>
+
+      <label for="emailAddress" class="visually-hidden">Email address</label>
+      <input type="email" id="email" class="form-control mt-3" placeholder="Email Address">
+      <label for="error_email" id="error_email"></label>
+  
+      <label for="password" class="visually-hidden">Password</label>
+     <input type="password" id="pwd1" placeholder="Password" class="form-control mt-3" > 
+     <!-- <label for="error_pwd1" id="error_pwd1"></label> -->
+     <div class="indicator">
+      <span  id="weak" class="weak"></span>
+      <span id= "medium" class="medium"></span>
+      <span id ="strong"  class="strong"></span>
+    </div>
+
+     <div class="row">
+      <div class="col-sm-5">
+          <h8 id="pwd_strength"></h8>
+      </div>
+      <div class="col-sm-7">
+        <label id="strength"></label>
+      </div>
+           </div>
+     <div class="pwd instructions" style="text-align: justify;font-size: smaller;">Use 8 or more characters with a mix of numbers,uppercase & lowercase letters</div>
+
+      <input type="password" id="pwd2" placeholder="Confirm Password" class="form-control mt-3" > 
+      <label for="error_pwd2" id="error_pwd2"></label>
+      <div class="checkbox mt-3">
+     <label>
+       <input type="checkbox"  id="MyCheckbox" value="remember-me"> I accept the <a href="#" style="text-decoration: none;">Terms of Use & Privacy Policy</a>
+     </label>
+   </div>
+      <div class="mt-3 d-grid gap-2 ">
+      <button class="btn btn-lg btn-primary btn-block text-uppercase ">Sign up</button>
+    </div>
+
+    <div class="mt-3 text-center">
+            
+                <p>or Sign up with:</p>
+                <button type="button" class="btn btn-primary btn-floating mx-1">
+                  <i class="bi bi-facebook"></i>
+                </button>
+            
+                <button type="button" class="btn btn-primary btn-floating mx-1">
+                  <i class="bi bi-google"></i>
+                </button>
+            
+                <button type="button" class="btn btn-primary btn-floating mx-1">
+                  <i class="bi bi-twitter"></i>
+                </button>
+            
+                <button type="button" class="btn btn-primary btn-floating mx-1">
+                  <i class="bi bi-github"></i>
+                </button>
+                 
+              </div>
+    <div class="mt-3 text-center">
+      Already have an account?
+      <a href="./login.html">Sign in</a></div>
+      
+     </form>
+    </div>
+    </div>
+    </div>
+    </div>
+  </div>
+  </div>
+  </div>
+</div>
+ </div>
+
+ <footer class="bg-light text-center text-lg-start">
+
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); margin-top: 12em;">
+    © 2021 Copyright:
+    <a class="text-dark" href="#">Greshma Johnson</a>
+  </div>
+</footer>
+<script src="/js/signup.js"></script>
+</body>
+</html>
